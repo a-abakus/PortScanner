@@ -33,8 +33,8 @@ Options:
   -d DOMAIN      enter a domain
                     or
   -i IP_ADDRESS  enter an ip address
-  -p PORT        for all ports type > all
-                 for single ports > 22""")
+  -p PORT        for all ports > all
+                 or single port > 22 """)
 
 
 def args_():
@@ -42,7 +42,7 @@ def args_():
         port_text = f"""for all ports type > all{(" " * 9) * 4}
         for single ports > 22"""
         parse_obj = optparse.OptionParser()
-        parse_obj.add_option("-h", "--help", dest="", help="show this help message")
+        # parse_obj.add_option("-h", "--help", dest="", help="show this help message")
         parse_obj.add_option("-d", "", dest="domain", help="enter a domain")
         parse_obj.add_option("-i", "", dest="ip_address", help="enter an ip address")
         parse_obj.add_option("-p", dest="port", help=port_text)
